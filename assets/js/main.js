@@ -27,13 +27,8 @@ $(document).ready(function() {
 			$('.grados').append(farenCelsius(clima));
 			$('.icono').append(icono);
 			$('.humedad').append(humedad + '%');
-			
 	});
 });
-
-
-
-
 
 /* Descarga de la dependencia de dark sky, pero preferí ocupar el ajax ya que he trabajado mas con él y lo conosco	
     'use strict';
