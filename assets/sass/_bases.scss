@@ -6,12 +6,41 @@ body{
 }
 
 #inicio{
+	background-image: url(../img/clima.jpg);
+	@include back();
 	
 	.inicio__dato{
 		width: 80%;
-		padding-top: 40%;
+		padding-top: 30%;
 	}
 	.inicio__btn{
+		@include btn();
+	}
+}
 
+#segundo{
+	background-image: url(../img/stgo1.jpg);
+	@include back();
+	background-attachment: fixed;
+	.segundo__img{
+		width: 20%;
+	}
+	.segundo__datos{
+		color: $white;
+	}
+	.segundo__btn{
+		@include btn();
+	}
+}
+
+#tercero{
+	background-image: url(../img/stgo1.jpg);
+	@include back();
+	background-attachment: fixed;
+	.tercero__datos{
+		color: $white;
+	}
+	.tercero__btn{
+		@include btn();
 	}
 }
