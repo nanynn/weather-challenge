@@ -15,19 +15,18 @@ gulp.task('script', function(){
 gulp.task('style', function(){
 	gulp.src(['node_modules/bootstrap/dist/css/bootstrap.css', 'assets/sass/main.scss'])
 		.pipe(sass().on('error', sass.logError))
-		.pipe(minifyCSS())
 		.pipe(concat('style.min.css'))
 		.pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('webserver', function(){
 	gulp.src('../weather-challenge/')
-		.pipe(webserver({
-			fallback: 'index.html',
-			livereload:true,
-			directoryListing:false,
-			open: true
-		}));
+	.pipe(webserver({
+		fallback: 'index.html',
+		livereload: true,
+		directoryListing: false,
+		open: true
+	}));
 });
 
 gulp.task('default', ['script', 'style', 'webserver']);

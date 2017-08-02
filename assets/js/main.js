@@ -1,7 +1,6 @@
 
-/*var key = 73ef9d7d2baa53b946c601e5a5ed7812; /api dark sky weather
+/*var key = 1860b7a1ee6960eb7e3dc17c48febe4e; /api dark sky weather
 var keyPhotos = 5fbb98ba0b09c0fc055f1550ca34da51; /api flickr */
-
 function farenCelsius(clima){
 	var valor = (clima - 32)*5/9;
 	var celcius = valor.toFixed(1) + 'º';
@@ -10,7 +9,7 @@ function farenCelsius(clima){
 
 $(document).ready(function() {
 	$.ajax({
-		url: 'https://api.darksky.net/forecast/73ef9d7d2baa53b946c601e5a5ed7812/-33.4569400,-70.6482700',
+		url: 'https://api.darksky.net/forecast/1860b7a1ee6960eb7e3dc17c48febe4e/-33.4569400,-70.6482700',
 		type: 'GET',
 		dataType: 'jsonp',
 		data: {param1: 'value1'},
@@ -19,14 +18,16 @@ $(document).ready(function() {
 	.done(function(forecast) {
 			console.log(forecast);
 			var clima = parseInt(forecast.currently.apparentTemperature);
-			var icono = forecast.currently.icon;
+			var icono = forecast.currently.summary;
 			var humedad = forecast.currently.humidity;
 			var lugar = forecast.timezone;
+			var uv = forecast.currently.uvIndex;
 
 			$('.ciudad').append(lugar);
 			$('.grados').append(farenCelsius(clima));
 			$('.icono').append(icono);
 			$('.humedad').append(humedad + '%');
+			$('.uv').append(uv);
 	});
 });
 

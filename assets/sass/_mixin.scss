@@ -1,11 +1,14 @@
-@mixin back(){
+@mixin back{
 	background-repeat: no-repeat;
 	background-position:center;
 	background-size:cover;
 }
 
-@mixin btn(){
-	width: 100%;
-	border; 1px solid $white;
-	color: $white;
+@mixin btn{
+	width: 80%;
+	text-decoration:none;
+	padding: 20px;
+	background-color: $white;
+	color: $black;
+	border-radius: 1em;
 }

@@ -6,7 +6,7 @@ function farenCelsius(clima){
 
 $(document).ready(function() {
 	$.ajax({
-		url: 'https://api.darksky.net/forecast/73ef9d7d2baa53b946c601e5a5ed7812/-33.4569400,-70.6482700',
+		url: 'https://api.darksky.net/forecast/1860b7a1ee6960eb7e3dc17c48febe4e/-33.4569400,-70.6482700',
 		type: 'GET',
 		dataType: 'jsonp',
 		data: {param1: 'value1'},

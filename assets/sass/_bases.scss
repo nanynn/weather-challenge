@@ -2,45 +2,142 @@ body{
 	font-family: 'Lato', sans-serif;
 	padding: 0;
 	margin:0;
-	background-color: $black;
-}
+}	
+
 
 #inicio{
-	background-image: url(../img/clima.jpg);
-	@include back();
+	background-image: url(../../dist/img/clima.jpg);
+	@include back;
+	height: 100vh;
 	
-	.inicio__dato{
-		width: 80%;
-		padding-top: 30%;
+	.inicio__title{
+		color: $white;
 	}
+	.inicio__dato{
+		width: 100%;
+		padding-top: 20%;
+	}
+	@media (max-width:1024px){
+		.inicio__dato{
+		width: 100%;
+		padding-top: 50%;
+		}
+	}	
+	
 	.inicio__btn{
-		@include btn();
+		padding-top: 10%;
+	}
+	.inicio__btn--color{
+		@include btn;
+		&:hover{
+			background-color: #bce7ff;
+			color: $black;
+		}
 	}
 }
 
 #segundo{
-	background-image: url(../img/stgo1.jpg);
-	@include back();
+	background-image: url(../../dist/img/stgo1.jpg);
+	@include back;
 	background-attachment: fixed;
+	height: 100vh;
+	
+	@media (max-width:1366px){
+		background-image: url(../../dist/img/stgo1.jpg);
+		@include back;
+		background-attachment: fixed;
+		height: 200vh;
+		.caja-desktop{
+			background-color: rgba(255,255,255,0.50);
+			border-radius: 1em;
+			padding-bottom: 10%;
+		}
+		.segundo__caja{
+			border-radius: 1em;
+			width: 40%;
+			padding-top: 10%;
+		}
+		.segundo__btn--color{
+			&:hover{
+				background-color: #bce7ff;
+				color: $black;
+			}
+		}
+
+		.segundo__btn--desktop{
+			padding-right: 10%;
+			padding-top: 10%;
+			text-decoration: none;
+			color: $black;
+			font-size: 21px;
+		}
+	}
+
+	.segundo__caja{
+		padding-top: 30%;
+	}
 	.segundo__img{
-		width: 20%;
+		margin: 0 auto;
+		width: 30%;
 	}
 	.segundo__datos{
-		color: $white;
+		color: $black;
 	}
 	.segundo__btn{
-		@include btn();
+		padding-top: 10%;
+	}
+	.segundo__btn--color{
+		@include btn;
 	}
 }
 
 #tercero{
-	background-image: url(../img/stgo1.jpg);
-	@include back();
+	background-image: url(../../dist/img/stgo1.jpg);
+	@include back;
 	background-attachment: fixed;
-	.tercero__datos{
-		color: $white;
+	height: 100vh;
+
+	@media (max-width:1366px){
+		background-image: url(../../dist/img/stgo1.jpg);
+		@include back;
+		background-attachment: fixed;
+		height: 200vh;
+		.caja-desktop{
+			background-color: rgba(255,255,255,0.50);
+			border-radius: 1em;
+		}
+		.tercero__datos{
+			border-radius: 1em;
+			width: 40%;
+			padding-top: 10%;
+		}
+		.tercero__btn--color{
+			&:hover{
+				background-color: #bce7ff;
+				color: $black;
+			}
+		}
 	}
+	
+	.tercero__datos{
+		color: $black;
+		padding-top: 30%;
+	}
+	.tercero__datos--title{
+		color: $black;
+		padding-bottom: 10%;
+	}
+	.tercer__img{
+		margin: 0 auto;
+		width: 20%;
+	}
+	
 	.tercero__btn{
-		@include btn();
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+
+	.tercero__btn--color{
+		@include btn;
 	}
 }
