@@ -1,31 +1,39 @@
 
+/*var key = 73ef9d7d2baa53b946c601e5a5ed7812; /api dark sky weather
+var keyPhotos = 5fbb98ba0b09c0fc055f1550ca34da51; /api flickr */
 
-//var key = 73ef9d7d2baa53b946c601e5a5ed7812; //api dark sky weather
-var clima = function(){
-	$.ajax({
-	url: 'https://api.darksky.net/forecast/73ef9d7d2baa53b946c601e5a5ed7812/-33.4569400,-70.6482700',
-	type: 'GET',
-	dataType: 'jsonp',
-	data: {param1: 'value1'},
-	})
-	.done(function() {
-		console.log(currently);
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});
+function farenCelsius(clima){
+	var valor = (clima - 32)*5/9;
+	var celcius = valor.toFixed(1) + 'º';
+	return celcius;
 }
 
-
-	
-
 $(document).ready(function() {
-	
+	$.ajax({
+		url: 'https://api.darksky.net/forecast/73ef9d7d2baa53b946c601e5a5ed7812/-33.4569400,-70.6482700',
+		type: 'GET',
+		dataType: 'jsonp',
+		data: {param1: 'value1'},
+	})
 
+	.done(function(forecast) {
+			console.log(forecast);
+			var clima = parseInt(forecast.currently.apparentTemperature);
+			var icono = forecast.currently.icon;
+			var humedad = forecast.currently.humidity;
+			var lugar = forecast.timezone;
+
+			$('.ciudad').append(lugar);
+			$('.grados').append(farenCelsius(clima));
+			$('.icono').append(icono);
+			$('.humedad').append(humedad + '%');
+			
+	});
 });
+
+
+
+
 
 /* Descarga de la dependencia de dark sky, pero preferí ocupar el ajax ya que he trabajado mas con él y lo conosco	
     'use strict';

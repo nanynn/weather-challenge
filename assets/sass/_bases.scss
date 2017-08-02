@@ -2,4 +2,16 @@ body{
 	font-family: 'Lato', sans-serif;
 	padding: 0;
 	margin:0;
+	background-color: $black;
+}
+
+#inicio{
+	
+	.inicio__dato{
+		width: 80%;
+		padding-top: 40%;
+	}
+	.inicio__btn{
+
+	}
 }
