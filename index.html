@@ -7,7 +7,30 @@
 </head>
 <body>
 	
-
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<input type="text" id="city-search" placeholder="Santiago, Chile" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<input type="text" id="latitude" placeholder="e.g. 42.9150747" required>
+				</div>
+				<div class="col-xs-6">
+					<input type="text" id="longitude" placeholder="e.g. -77.784323" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="#">Ver clima</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtS6AWS17K9lG9Bk8tGSu4UKWSYDfw9aY&libraries=places,geometry"></script>
 	<script src="dist/js/script.js"></script>
 </body>
 </html>
