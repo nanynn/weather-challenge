@@ -5,7 +5,7 @@ Front-end developer chanllenge
 
 El proyecto fue realizado con las siguientes dependencias NPM:
 
-* Dependencias de desarrollo 
+* Dependencias de desarrollo: 
 	- Gulp ~v.3.9.1
 	- Gulp-Concat ~v.2.6.1 
 	- Gulp-Minify-CSS ~v.1.2.4 
@@ -13,9 +13,14 @@ El proyecto fue realizado con las siguientes dependencias NPM:
 	- Gulp-Uglify ~v.2.0.0
 	- Gulp-Webserver ~0.9.1
 
-* Dependencias de Producción 
+* Dependencias de Producción:
 	- JQuery ~v.3.1.1 
 	- Bootstrap ~3.3.7
+
+* Solicitud de Apis:
+	- Google Maps
+	- Dark Sky 
+
 
 **Clonar repositorio**
 

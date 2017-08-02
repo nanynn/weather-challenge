@@ -12630,4 +12630,75 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-main.js
+
+
+/*var key = 73ef9d7d2baa53b946c601e5a5ed7812; //api dark sky weather
+
+
+$('#buscar').click(function() {
+	$.getJson('', function(forecast){
+		console.log(forecast);
+	})
+});
+
+var searchBox = new google.maps.places.SearchBox(document.querySelector("#ciudad-origen"));
+	/*var autocomplete = new google.maps.places.Autocomplete(inOrigen);
+	autocomplete.bindTo('bounds', map);*/
+
+	/*searchBox.addListener('places_changed', function(){
+		var locale = searchBox.getPlaces()[0];
+		document.querySelector('#latitude').value = place.geometry.location.lat();
+		document.querySelector('#longitude').value = place.geometry.location.lng();
+	});*/
+	
+
+$(document).ready(function() {
+	$.ajax({
+	url: 'https://api.darksky.net/forecast/73ef9d7d2baa53b946c601e5a5ed7812/-33.4569400,-70.6482700',
+	type: 'GET',
+	dataType: 'jsonp',
+	data: {param1: 'value1'},
+	})
+	.done(function(forecast) {
+		console.log(forecast);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+
+	
+
+});
+
+/*$.getJSON('https://api.darksky.net/forecast/73ef9d7d2baa53b946c601e5a5ed7812/-9.1191427,-77.0349046', function(forecast) {
+    console.log(forecast);
+
+    'use strict';
+	const DarkSky = require('dark-sky')
+	const forecast = new DarkSky('73ef9d7d2baa53b946c601e5a5ed7812')
+	 
+	forecast
+	    .latitude('-33.4569400')            \\ required: latitude, string.
+	    .longitude('-70.6482700')          \\ required: longitude, string.
+	    .time('2017-08-28')             \\ optional: date, string 'YYYY-MM-DD'.
+	    .units('ca')                    \\ optional: units, string, refer to API documentation.
+	    .language('en')                 \\ optional: language, string, refer to API documentation.
+	    .exclude('minutely,daily')      \\ optional: exclude, string, refer to API documentation.
+	    .extendHourly(true)             \\ optional: extend, boolean, refer to API documentation.
+	    .get()                          \\ execute your get request.
+	    .then(res => {                  \\ handle your success response.
+	        console.log(res)
+	    })
+	    .catch(err => {                 \\ handle your error response.
+	        console.log(err)
+	    })
+    
+});*/
+
+
+
+
+
